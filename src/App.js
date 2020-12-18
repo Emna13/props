@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Profile from './components/profile';
+import PropTypes from 'prop-types';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+ 
+  const profileList =[
+    {
+      name:'Emna Mezni',
+      bio: 'Hello everyone ! This is my Card. Feel free to share it with your contacts.',
+      profession:'Développeur',
+    }
+  ]
+ 
+    
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Profile profileList={profileList}/>
     </div>
   );
 }
